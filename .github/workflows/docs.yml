@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: dtolnay/rust-toolchain@7b1c307e0dcbda6122208f10795a713336a9b35a
         with:
-          toolchain: 2.10.0
+          toolchain: stable
       - uses: Swatinem/rust-cache@82a92a6e8fbeee089604da2575dc567ae9ddeaab
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -50,7 +50,7 @@ jobs:
       - name: Install Scarb
         uses: software-mansion/setup-scarb@v1
         with:
-          scarb-version: latest
+          scarb-version: 2.10.0
       - name: Generate and build snforge_std docs
         run: |
           scarb doc
